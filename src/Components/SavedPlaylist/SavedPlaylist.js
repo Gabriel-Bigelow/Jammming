@@ -1,9 +1,9 @@
 import React from 'react';
 import { TrackList } from '../TrackList/TrackList';
 
-import './InactivePlaylist.css'
+import './SavedPlaylist.css'
 
-export class InactivePlaylist extends React.Component {
+export class SavedPlaylist extends React.Component {
     constructor(props) {
         super(props);
 
@@ -22,7 +22,7 @@ export class InactivePlaylist extends React.Component {
 
     render() {
         return (
-                <div className="inactive-playlist">
+                <div className="saved-playlist">
                     <button id="clone-button" onClick={this.handleClick}>CLONE PLAYLIST</button>
                     <h1 id="title">{this.props.playlistName}</h1>
                     <TrackList tracks={this.props.tracks} onRemove={this.props.onRemove} />

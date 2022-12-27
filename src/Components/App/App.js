@@ -8,7 +8,7 @@ import { Spotify } from "../../util/Spotify";
 import { SearchBar } from "../SearchBar/SearchBar";
 import { SearchResults } from "../SearchResults/SearchResults";
 import { Playlist } from "../Playlist/Playlist";
-import { InactivePlaylist } from "../InactivePlaylist/InactivePlaylist";
+import { SavedPlaylist } from "../SavedPlaylist/SavedPlaylist";
 
 
 export class App extends React.Component {
@@ -62,7 +62,6 @@ export class App extends React.Component {
   }
 
   clonePlaylist(playlist) {
-    //const selectedPlaylist = playlist;
     this.setState({playlistName: playlist.name});
     this.setState({playlistTracks: playlist.tracks});
   }
@@ -90,10 +89,10 @@ export class App extends React.Component {
           </div>
         </div>
 
-        <div id="inactivePlaylists">
+        <div id="savedPlaylists">
           {
             this.state.playlists.map((playlist) => {
-              return <InactivePlaylist playlist={playlist} playlistId={playlist.id} playlistName={playlist.name} tracks={playlist.tracks} onClick={this.clonePlaylist} /> 
+              return <SavedPlaylist playlist={playlist} playlistId={playlist.id} playlistName={playlist.name} tracks={playlist.tracks} onClick={this.clonePlaylist} /> 
             })
           }
         </div>

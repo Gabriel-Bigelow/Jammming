@@ -113,11 +113,8 @@ export const Spotify = {
                 if (playlistResponse.ok) {
                     const jsonPlaylistResponse = await playlistResponse.json();
                     playlists = jsonPlaylistResponse.items;
-                    //console.log(playlists);
 
                     for (let playlistId in playlists) {
-                        //console.log(playlistId)
-                        //console.log(playlists[playlistId])
                         const tracksResponse = await fetch(`https://api.spotify.com/v1/playlists/${playlists[playlistId].id}/tracks/`, {headers: headers})
                         if (tracksResponse.ok) {
                             const jsonTracksResponse = await tracksResponse.json();
