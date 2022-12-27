@@ -1,0 +1,9 @@
+@font-face {
+    font-family: Poppins;
+    src: url(../src/fonts/poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: Work-sans;
+    src: url(../src/fonts/work-sans/WorkSans-VariableFont_wght.ttf);
+}
