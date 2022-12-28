@@ -1,4 +1,6 @@
 const clientId = '4a327fcb301442078913bf08c211b683';
+// local dev address "http://localhost:3000/"
+// deploy address "https://jammming-to-music.netlify.app/"
 const redirectURI = "https://jammming-to-music.netlify.app/";
 let accessToken;
 
